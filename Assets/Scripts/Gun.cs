@@ -60,14 +60,14 @@ public class Gun : MonoBehaviour
             {
                 target.TakeDamage(damage);
                 targetsHit += 1;
-                if(targetsHit < 4)
-                {
-                    objManager.changeObjectiveText("bottles shot " +targetsHit + "/4");
-                }
-                else
-                {
-                    objManager.changeObjectiveText("celebrate, you did it!");
-                }
+                //if(targetsHit < 4)
+                //{
+                //    objManager.changeObjectiveText("bottles shot " +targetsHit + "/4");
+                //}
+                //else
+                //{
+                //    objManager.changeObjectiveText("celebrate, you did it!");
+                //}
 
 
             }
