@@ -13,6 +13,7 @@ public class Chest : MonoBehaviour
             player.ActivateGun(); 
 
             keyUI.SetActive(false);
+            gameObject.tag = "Untagged";
        }
    }
 }

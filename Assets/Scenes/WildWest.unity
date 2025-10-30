@@ -2390,6 +2390,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 360120181}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: set_tag
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Untagged
+            m_BoolArgument: 1
+          m_CallState: 2
   npcName: Ghost
   spokenWith: 0
   randomLines: 0
@@ -12332,6 +12344,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1054748593}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dig
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!65 &1632961709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15789,15 +15813,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f46d88c9523bdd488fe3ffe4bcfb38f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.160004
+      value: 30.317
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f46d88c9523bdd488fe3ffe4bcfb38f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.882998
+      value: 2.579
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f46d88c9523bdd488fe3ffe4bcfb38f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.059998
+      value: 23.53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8f46d88c9523bdd488fe3ffe4bcfb38f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16125,15 +16149,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29df950e8bc63fe4cac48a39c9f99ac4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.5
+      value: 29.819
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29df950e8bc63fe4cac48a39c9f99ac4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8809981
+      value: 2.595
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29df950e8bc63fe4cac48a39c9f99ac4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.570007
+      value: 23.92
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29df950e8bc63fe4cac48a39c9f99ac4, type: 3}
       propertyPath: m_LocalRotation.w
