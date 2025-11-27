@@ -5,19 +5,7 @@ using UnityEngine;
 public class SoundsManager : MonoBehaviour
 {
     public static SoundsManager Instance { get; set; }
-    public AudioClip[] gunksDestroy;
-    public AudioClip lobotomyMinigame;
-
-    public AudioClip[] whispers;
-
-    public AudioClip[] ominousOutsideMusic;
-    public AudioClip[] ominousInsideMusic;
-
-    public AudioClip[] outsideAmbience;
-    public AudioClip[] insideAmbience;
-
-    public AudioClip LeechSpawn;
-    public AudioClip LeechDeath;
+    public AudioClip[] glassShatter;
 
     private void Awake()
     {

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Ghost
   m_EditorClassIdentifier: 
   npcName: Ghost of a gunslinger
-  npcColor: {r: 0, g: 0.93359566, b: 1, a: 1}
-  npcVoice: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+  npcColor: {r: 0.052481227, g: 0.66746503, b: 0.7132075, a: 1}
+  npcVoice: {fileID: 8300000, guid: c22972e8462532c44984233c6b32bb94, type: 3}

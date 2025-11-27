@@ -7,6 +7,7 @@ public class SoundFXManager : MonoBehaviour
     public static SoundFXManager instance;
 
     [SerializeField] private AudioSource soundFXObject;
+    public AudioClip[] glassShatter;
 
     //Singletonas
     private void Awake()

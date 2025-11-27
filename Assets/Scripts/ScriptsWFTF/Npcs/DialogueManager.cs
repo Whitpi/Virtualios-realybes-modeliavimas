@@ -166,7 +166,7 @@ public class DialogueManager : MonoBehaviour
             isTyping = true;
 
             //Garso efekto paleidimas
-            //SoundFXManager.instance.PlaySoundFXClip(voice, transform, 0.2f);
+            SoundFXManager.instance.PlaySoundFXClip(voice, transform, 0.2f);
 
 
             dialogue.text += letter;

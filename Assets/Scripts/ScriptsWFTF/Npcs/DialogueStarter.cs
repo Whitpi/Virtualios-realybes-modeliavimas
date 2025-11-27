@@ -57,8 +57,7 @@ public class DialogueStarter : MonoBehaviour
         if (quest.state == QuestState.notStarted)
         {
             dialogue.defaultDialogueLines = quest.QuestStartDialogueLines;
-            quest.state = QuestState.inProgress; // Kai pradejom questa, po pirmo pasnekejimo perdarom i progresuota quest'a
-            //JournalManager.Instance.AddEntry(quest.questDescription,quest.drawingStartQuest);
+            quest.state = QuestState.inProgress;
         }
         else if (quest.state == QuestState.inProgress)
         {
@@ -67,7 +66,6 @@ public class DialogueStarter : MonoBehaviour
         else if (quest.state == QuestState.ReadyToTurnIn)
         {
             dialogue.defaultDialogueLines = quest.QuestInCompleteDialogueLines;
-            //JournalManager.Instance.AddEntry(quest.questFinishedDesc,quest.drawingEndQuest);
         }
         else if (quest.state == QuestState.notAvailable)
         {
@@ -91,11 +89,6 @@ public class DialogueStarter : MonoBehaviour
             {
                 return true;
             }
-            //if (!InventoryManager.Instance.HasItem(item.item, item.quantity))
-            //{
-            //    Debug.Log("quest itemu neturi zaidejas");
-            //    return false;
-            //}
         }
         return true;
     }

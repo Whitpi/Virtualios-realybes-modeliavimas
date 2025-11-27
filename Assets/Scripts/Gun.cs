@@ -24,18 +24,33 @@ public class Gun : MonoBehaviour
     public TextMeshProUGUI bulletCounter;
 
     public GameObject bulletBoxUI;
+    public GameObject muzzleFlash;
 
     private float nextTimeToFire = 0f;
+
+    [SerializeField] private AudioClip shootLoaded;
+    [SerializeField] private AudioClip shootEmpty;
+    [SerializeField] private AudioClip reload;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire && ammo > 0)
+        if(Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
-            nextTimeToFire = Time.time + 1f/fireRate;
-            Shoot();
-            ammo -= 1;
-            bulletCounter.text = "x " + ammo;
+            if (ammo > 0)
+                {
+                nextTimeToFire = Time.time + 1f / fireRate;
+                Shoot();
+                ammo -= 1;
+                bulletCounter.text = "x " + ammo;
+                SoundFXManager.instance.PlaySoundFXClip(shootLoaded, transform, 0.2f);
+                muzzleFlash.SetActive(true);
+                Invoke("disableMuzzleFlash", 0.1f);
+            }
+            else
+            {
+                SoundFXManager.instance.PlaySoundFXClip(shootEmpty, transform, 0.2f);
+            }
         }
 
         if(Input.GetKeyDown(KeyCode.R) && player.hasAmmo)
@@ -44,6 +59,7 @@ public class Gun : MonoBehaviour
             player.hasAmmo = false;
             bulletBoxUI.SetActive(false);
             bulletCounter.text = "x " + ammo;
+            SoundFXManager.instance.PlaySoundFXClip(reload, transform, 0.2f);
         }
     }
 
@@ -51,6 +67,8 @@ public class Gun : MonoBehaviour
     {
         gunAnimator.SetTrigger("shoot");
         RaycastHit hit;
+
+        
         
         if(Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range))
         {
@@ -60,21 +78,16 @@ public class Gun : MonoBehaviour
             {
                 target.TakeDamage(damage);
                 targetsHit += 1;
-                //if(targetsHit < 4)
-                //{
-                //    objManager.changeObjectiveText("bottles shot " +targetsHit + "/4");
-                //}
-                //else
-                //{
-                //    objManager.changeObjectiveText("celebrate, you did it!");
-                //}
-
-
             }
             if(hit.rigidbody != null)
             {
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
         }
+    }
+
+    void disableMuzzleFlash()
+    {
+        muzzleFlash.SetActive(false);
     }
 }

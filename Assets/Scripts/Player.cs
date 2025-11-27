@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public GameObject keyUI;
     public GameObject ammoUI;
     public GameObject bulletUI;
+    [SerializeField] private AudioClip activateGun;
 
     public void giveKey()
     {

@@ -74,6 +74,10 @@ public class PlayerMovement : MonoBehaviour
                 gun.SetBool("WhenMoving", false);
             }
         }
+        if (isMoving && canPlaySound)
+        {
+            StartCoroutine(PlaySoundWithDelay(0.7f));
+        }
 
 
     }
